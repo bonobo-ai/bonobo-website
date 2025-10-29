@@ -17,8 +17,10 @@
     --box-shadow: 0 4px 6px rgba(0, 145, 170, 0.1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--white);
@@ -223,21 +225,41 @@ body {
 
 .insights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.insight-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-    background: var(--light-bg);
+.insight-card {
+    background: var(--white);
+    padding: 30px;
     border-radius: var(--border-radius);
+    text-align: center;
+    border: 2px solid var(--light-bg);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
 }
 
 .insight-icon {
-    font-size: 32px;
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.insight-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.insight-card p {
+    color: var(--text-light);
+    font-size: 14px;
 }
 
 /* CTA Section */

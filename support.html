@@ -76,7 +76,10 @@
                 <div class="contact-section">
                     <h2>Contact Us</h2>
 
-                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/bonobo.app.ai@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Bonobo Support Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://bonobo-ai.github.io/bonobo-website/thank-you.html">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -137,15 +140,5 @@
         </div>
     </footer>
 
-    <script>
-        // Show success message after form submission
-        const form = document.querySelector('.contact-form');
-        form.addEventListener('submit', function(e) {
-            // Formspree will handle the actual submission
-            setTimeout(() => {
-                alert('Thank you for your message! We\'ll get back to you soon.');
-            }, 100);
-        });
-    </script>
 </body>
 </html>
